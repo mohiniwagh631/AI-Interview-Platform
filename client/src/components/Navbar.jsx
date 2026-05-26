@@ -6,43 +6,53 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-white/10 text-white px-4 md:px-8 py-4 flex justify-between items-center shadow-lg">
 
       {/* Logo */}
-      <Link to="/">
-
-        <h1 className="text-xl md:text-2xl font-bold text-blue-500 cursor-pointer">
-          InterviewAI
-        </h1>
-
+      <Link
+        to="/"
+        onClick={() => window.scrollTo(0, 0)}
+        className="text-xl md:text-2xl font-bold text-blue-500"
+      >
+        InterviewAI
       </Link>
 
       {/* Navigation Links */}
       <ul className="hidden md:flex gap-6 lg:gap-8 font-medium items-center">
 
         {/* Home */}
-        <Link to="/">
+        <li>
 
-          <li className="hover:text-blue-400 cursor-pointer transition duration-300">
+          <Link
+            to="/"
+            onClick={() => window.scrollTo(0, 0)}
+            className="hover:text-blue-400 transition duration-300"
+          >
             Home
-          </li>
+          </Link>
 
-        </Link>
+        </li>
 
-        {/* Features Scroll */}
-        <a href="#features">
+        {/* Features */}
+        <li>
 
-          <li className="hover:text-blue-400 cursor-pointer transition duration-300">
+          <a
+            href="/#features"
+            className="hover:text-blue-400 transition duration-300"
+          >
             Features
-          </li>
+          </a>
 
-        </a>
+        </li>
 
-        {/* About Scroll */}
-        <a href="#about">
+        {/* About */}
+        <li>
 
-          <li className="hover:text-blue-400 cursor-pointer transition duration-300">
+          <a
+            href="/#about"
+            className="hover:text-blue-400 transition duration-300"
+          >
             About
-          </li>
+          </a>
 
-        </a>
+        </li>
 
       </ul>
 
