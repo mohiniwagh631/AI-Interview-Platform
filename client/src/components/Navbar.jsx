@@ -15,8 +15,9 @@ export default function Navbar() {
       </Link>
 
       {/* Navigation Links */}
-      <ul className="hidden md:flex gap-6 lg:gap-8 font-medium">
+      <ul className="hidden md:flex gap-6 lg:gap-8 font-medium items-center">
 
+        {/* Home */}
         <Link to="/">
 
           <li className="hover:text-blue-400 cursor-pointer transition duration-300">
@@ -25,19 +26,30 @@ export default function Navbar() {
 
         </Link>
 
-        <li className="hover:text-blue-400 cursor-pointer transition duration-300">
-          Features
-        </li>
+        {/* Features Scroll */}
+        <a href="#features">
 
-        <li className="hover:text-blue-400 cursor-pointer transition duration-300">
-          About
-        </li>
+          <li className="hover:text-blue-400 cursor-pointer transition duration-300">
+            Features
+          </li>
+
+        </a>
+
+        {/* About Scroll */}
+        <a href="#about">
+
+          <li className="hover:text-blue-400 cursor-pointer transition duration-300">
+            About
+          </li>
+
+        </a>
 
       </ul>
 
       {/* Buttons */}
       <div className="flex gap-2 md:gap-4">
 
+        {/* Login */}
         <Link to="/login">
 
           <button className="border border-blue-500 px-3 md:px-5 py-2 rounded-xl hover:bg-blue-500 transition duration-300 text-sm md:text-base">
@@ -48,6 +60,7 @@ export default function Navbar() {
 
         </Link>
 
+        {/* Signup */}
         <Link to="/signup">
 
           <button className="bg-blue-500 px-3 md:px-5 py-2 rounded-xl hover:bg-blue-600 transition duration-300 shadow-lg text-sm md:text-base">

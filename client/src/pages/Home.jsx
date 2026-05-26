@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom";
+
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
+
 import {
   FaRobot,
   FaMicrophone,
   FaCode,
   FaChartLine
 } from "react-icons/fa";
+
 export default function Home() {
   return (
     <div>
@@ -22,14 +26,22 @@ export default function Home() {
           improve coding skills, and get real-time feedback.
         </p>
 
-        <div className="mt-8">
-          <Button text="Start Interview" />
-        </div>
+        {/* Button Navigation */}
+        <Link to="/login">
+
+          <div className="mt-8">
+            <Button text="Start Interview" />
+          </div>
+
+        </Link>
 
       </section>
 
       {/* FEATURES SECTION */}
-      <section className="py-20 px-8 bg-gray-100">
+      <section
+        id="features"
+        className="py-20 px-8 bg-gray-100"
+      >
 
         <h2 className="text-4xl font-bold text-center mb-16">
           Powerful Features
@@ -37,31 +49,31 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-  <Card
-    icon={<FaRobot />}
-    title="AI Resume Analyzer"
-    description="Analyze ATS score and improve your resume instantly."
-  />
+          <Card
+            icon={<FaRobot />}
+            title="AI Resume Analyzer"
+            description="Analyze ATS score and improve your resume instantly."
+          />
 
-  <Card
-    icon={<FaMicrophone />}
-    title="Voice Interviews"
-    description="Practice real-time voice interviews using AI."
-  />
+          <Card
+            icon={<FaMicrophone />}
+            title="Voice Interviews"
+            description="Practice real-time voice interviews using AI."
+          />
 
-  <Card
-    icon={<FaCode />}
-    title="Coding Practice"
-    description="Solve coding problems with online compiler support."
-  />
+          <Card
+            icon={<FaCode />}
+            title="Coding Practice"
+            description="Solve coding problems with online compiler support."
+          />
 
-  <Card
-    icon={<FaChartLine />}
-    title="Dashboard Analytics"
-    description="Track your performance and improvement."
-  />
+          <Card
+            icon={<FaChartLine />}
+            title="Dashboard Analytics"
+            description="Track your performance and improvement."
+          />
 
-</div>
+        </div>
 
       </section>
 
@@ -82,7 +94,7 @@ export default function Home() {
         </div>
 
         {/* Steps */}
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
 
           {/* Step 1 */}
           <div className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
@@ -156,14 +168,22 @@ export default function Home() {
 
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-black text-white py-10 text-center">
+      {/* FOOTER / ABOUT */}
+      <footer
+        id="about"
+        className="bg-black text-white py-10 text-center"
+      >
 
         <h2 className="text-2xl font-bold text-blue-500">
           InterviewAI
         </h2>
 
-        <p className="mt-4 text-gray-400">
+        <p className="mt-4 text-gray-400 max-w-2xl mx-auto px-4">
+          AI-powered interview preparation platform helping students
+          improve technical, coding, and communication skills.
+        </p>
+
+        <p className="mt-6 text-gray-500">
           © 2026 All Rights Reserved.
         </p>
 
